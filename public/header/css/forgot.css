@@ -1,0 +1,251 @@
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #697c37;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 2; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Poppins", sans-serif;
+  color: #000; }
+
+.btn-primary{
+	background: #697c37;
+}
+
+.btn-primary:hover{
+	background: rgb(100, 114, 65);
+}
+
+.btn-primary:active{
+	background: rgb(116, 130, 49);
+}
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a, a:hover {
+    text-decoration: none !important; }
+
+.text-black {
+  color: #000; }
+
+.content {
+  padding: 7rem 0; }
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff; }
+
+.form-control {
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+  .form-control:active, .form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000; }
+
+.col-form-label {
+  color: #000; }
+
+.btn, .form-control, .custom-select {
+  height: 50px; }
+
+.custom-select:active, .custom-select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #000; }
+
+.heading {
+  color: #888;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.btn {
+  color: #fff;
+  border: none;
+  border-radius: 4px !important;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1) !important; }
+  .btn:hover {
+    color: #fff; }
+  .btn:active, .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.box {
+  padding: 40px;
+  background: #fff;
+  -webkit-box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08); }
+  .box h3 {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center; }
+
+label.error {
+  font-size: 12px;
+  color: red; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: #B90B0B; }
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; }
+
+.submitting {
+  text-align: center;
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000; }
+  
+ @media ( max-width : 414px) {
+	.item {
+		display: block
+	}
+	.label-align {
+		text-align: left
+	}
+}
+
+@media ( max-width : 400px) {
+	.cropper .btn-group-crop {
+		margin-right: -15px !important
+	}
+	.item {
+		display: block
+	}
+	.label-align {
+		text-align: left
+	}
+	.cropper .btn-group-crop>.btn {
+		padding-left: 5px;
+		padding-right: 5px
+	}
+	.cropper .btn-group-crop .docs-tooltip {
+		margin-left: -5px;
+		margin-right: -5px;
+		padding-left: 5px;
+		padding-right: 5px
+	}
+}
+
+@media ( min-width : 480px) {
+	.nav_menu {
+		position: static
+	}
+	.item {
+		display: block
+	}
+}
+
+@media ( max-width : 991px) {
+	.nav-md .container.body .right_col, .nav-md .container.body .top_nav {
+		width: 100%;
+		margin: 0
+	}
+	.nav-md .container.body .col-md-3.left_col {
+		display: none
+	}
+	.nav-md .container.body .right_col {
+		width: 100%;
+		padding-right: 0
+	}
+	.right_col {
+		padding: 10px !important
+	}
+	.item {
+		display: block
+	}
+}
+
+@media ( max-width : 1200px) {
+	.x_title h2 {
+		width: 62%;
+		font-size: 17px
+	}
+	.tile, .graph {
+		zoom: 76%;
+		height: inherit
+	}
+	.item {
+		display: block
+	}
+}
+
+.item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex
+}
+
+.item input, .item textarea {
+	-webkit-transition: 0.42s;
+	transition: 0.42s
+}
+
+.item .alert {
+	float: left;
+	margin: 0 0 0 20px;
+	padding: 3px 10px;
+	color: #FFF;
+	border-radius: 3px 4px 4px 3px;
+	background-color: #CE5454;
+	max-width: 170px;
+	white-space: pre;
+	position: relative;
+	left: -15px;
+	opacity: 0;
+	z-index: 1;
+	-webkit-transition: 0.15s ease-out;
+	transition: 0.15s ease-out
+}
+
+.item .alert::after {
+	content: '';
+	display: block;
+	height: 0;
+	width: 0;
+	border-color: transparent #CE5454 transparent transparent;
+	border-style: solid;
+	border-width: 11px 7px;
+	position: absolute;
+	left: -13px;
+	top: 1px
+}
+
+.item.bad .alert {
+	left: 0;
+	opacity: 1
+}
+.form-horizontal .form-group {
+	margin-right: 0;
+	margin-left: 0
+}
+.form-group {
+	margin-bottom: 10px
+}

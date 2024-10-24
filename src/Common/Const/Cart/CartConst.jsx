@@ -1,0 +1,16 @@
+import {DOMAIN} from '../../API/domain';
+
+export const ADD_CART = 'ADD_CART';
+export const ADD_CART_QUANTITY_FREE = 'ADD_CART_QUANTITY_FREE';
+export const UPDATE_QUANTITY_CART ='UPDATE_QUANTITY_CART';
+export const UPDATE_QUANTITY_CART_DETAIL = 'UPDATE_QUANTITY_CART_DETAIL';
+export const REMOVE_PRODUCT_TO_CART = 'REMOVE_PRODUCT_TO_CART';
+export const GET_ALL_CART = 'GET_ALL_CART';
+export const IMAGE_PRODUCT_URL = `${DOMAIN}/images/product`;
+export const GET_VOUCHER = 'GET_VOUCHER';
+export const DELETE_VOUCHER = 'DELETE_VOUCHER';
+export const CANCEL_VOUCHER = 'CANCEL_VOUCHER';
+export const SET_STICK = 'SET_STICK';
+export const SET_ALL_STICK = 'SET_ALL_STICK';
+export const CLEAR_PRODUCT_IN_CART ='CLEAR_PRODUCT_IN_CART';
+export const WAITING_ADD_CART ='WAITING_ADD_CART';

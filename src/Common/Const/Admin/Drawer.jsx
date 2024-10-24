@@ -1,0 +1,7 @@
+export const SET_SUBMIT_FORM = 'SET_SUBMIT_FORM';
+export const OPEN_FORM = 'OPEN_FORM';
+export const OPEN_FORM_CREATE = 'OPEN_FORM_CREATE';
+export const OPEN_DRAWER = 'OPEN_DRAWER';
+export const CLOSE_DRAWER ='CLOSE_DRAWER';
+export const DISABLED_BUTTON = 'DISABLED_BUTTON';
+export const ABLE_BUTTON = 'ABLE_BUTTON';

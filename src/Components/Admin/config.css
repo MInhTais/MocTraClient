@@ -1,0 +1,17 @@
+.ant-table{
+    box-shadow: 0 0 5px rgb(78, 78, 78);
+    border-radius: 5px;
+}
+
+.ant-table-thead > tr >th{
+    color: black;
+    background: white;
+  }
+  .ant-table-cell .ant-table-cell-ellipsis .ant-table-column-has-sorters:hover{
+    color: black;
+    background: rgb(19, 18, 18);
+  }
+
+.anticon .anticon-search{
+    color: black !important
+}

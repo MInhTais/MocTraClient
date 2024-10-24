@@ -1,0 +1,1 @@
+export const CHANGED_PASSWORD = 'CHANGED_PASSWORD';

@@ -1,0 +1,2 @@
+export const SIGN_UP_ACTION ='SIGN_UP_ACTION';
+export const SIGN_UP_SHOP_ACTION ='SIGN_UP_SHOP_ACTION';

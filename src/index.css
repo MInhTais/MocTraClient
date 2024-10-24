@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 320px;
+  perspective: 1000px;
+}
+.flip-card .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card .inner .front, .flip-card .inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flip-card .inner .front {
+  background-color: white;
+}
+.flip-card .inner .back {
+  background-color: white;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+  /* ––––––––––––––––––––––––––––––––––––––––––––––––––
+    Based on: https://codepen.io/nickelse/pen/YGPJQG
+    Influenced by: https://sproutsocial.com/
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+  /* #Mega Menu Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .mega-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+  }
+
+
+
+  /* #hoverable Class Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .hoverable {
+    position: static;
+  }
+
+  .hoverable > a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+  .hoverable:hover .mega-menu {
+    display: block;
+  }
+
+
+  /* #toggle Class Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  .toggleable > label:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+  .toggle-input {
+    display: none;
+  }
+  .toggle-input:not(checked) ~ .mega-menu {
+    display: none;
+  }
+
+  .toggle-input:checked ~ .mega-menu {
+    display: block;
+  }
+
+  .toggle-input:checked + label {
+    color: white;
+    background: #2c5282; /*@apply bg-blue-800 */
+  }
+
+  .toggle-input:checked ~ label:after {
+    content: "\25B2";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+  }
+
+  .border-b-animation {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.border-b-animation::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(7, 53, 1);
+    transition: width .3s;
+}
+
+.border-b-animation:hover::after {
+    width: 70%;
+    
+}
+
+.custom-arrow-thumb{
+  height: 220px;
+}
+.custom-arrow-thumb .user-arrow {
+  top: 50%;
+  margin-top: -40px;
+}
+.custom-arrow-thumb .user-arrow .img-wrapper {
+  width: 120px;
+  height: 80px;
+  float: left;
+  position: relative;
+}
+.custom-arrow-thumb .user-arrow .img-wrapper li {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+.custom-arrow-thumb .user-arrow .arrow {
+  width: 20px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.custom-arrow-thumb .user-arrow .arrow:before,
+.custom-arrow-thumb .user-arrow .arrow:after {
+  width: 2px;
+  height: 15px;
+  background: #fff;
+  display: block;
+  content: ' ';
+  position: absolute;
+}
+.custom-arrow-thumb .user-arrow.next {
+  right: -120px;
+}
+.custom-arrow-thumb .user-arrow.next .arrow {
+  float: left;
+}
+.custom-arrow-thumb .user-arrow.next .arrow:before {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  top: 28px;
+  left: 10px;
+}
+.custom-arrow-thumb .user-arrow.next .arrow:after {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  bottom: 27px;
+  left: 10px;
+}
+.custom-arrow-thumb .user-arrow.prev {
+  left: -120px;
+}
+.custom-arrow-thumb .user-arrow.prev .arrow {
+  float: right;
+}
+.custom-arrow-thumb .user-arrow.prev .arrow:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  top: 28px;
+  left: 8px;
+}
+.custom-arrow-thumb .user-arrow.prev .arrow:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  bottom: 27px;
+  left: 8px;
+}
+.custom-arrow-thumb .user-thumb {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  height: 40px;
+}
+.custom-arrow-thumb .user-thumb > span {
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -webkit-transition: background .3s;
+          transition: background .3s;
+  background: transparent;
+}
+.custom-arrow-thumb .user-thumb > span.active {
+  background: rgba(255, 255, 255, 0.45);
+}
+.custom-arrow-thumb .user-thumb > span i {
+  display: block;
+  width: 46px;
+  height: 26px;
+  margin: 2px;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-user {
+  height: 220px;
+}
+.banner-user-elem {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.banner-user-elem .banner-user-title {
+  font-size: 32px;
+  top: 40%;
+}
+.banner-user-elem .banner-user-text {
+  top: 40%;
+}
+.banner-anim-elem .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.react-multiple-carousel__arrow--right{
+  z-index: 1;
+}
+
+.ant-image-preview-img{
+  @apply w-1/2 h-screen flex flex-row justify-center float-right
+}
+
+.banner-anim-arrow .user-arrow .next{
+  @apply z-0
+}
+
+.ant-statistic-title{
+  @apply text-white font-bold
+}
+
+.coverflow__coverflow__53z9A{
+  background: white;
+}
+
+.react-multiple-carousel__arrow{
+  @apply z-0 !important bg-green-300 !important bg-opacity-70 !important hover:bg-green-500 !important
+}
+
+.banner-anim-arrow{
+  @apply z-0 !important
+}
+.my-menu-collapse{
+  display: block;
+		font-size: 22px;
+		color: #222;
+		height: 35px;
+		width: 35px;
+		line-height: 35px;
+		text-align: center;
+		border: 1px solid #b7eb94;
+		border-radius: 2px;
+		cursor: pointer;
+		position: absolute;
+		right: 15px;
+		top: 24px;
+}

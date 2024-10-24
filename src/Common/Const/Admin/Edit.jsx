@@ -1,0 +1,15 @@
+export const EDIT_PROVIDER = 'EDIT_PROVIDER';
+export const EDIT_USER ='EDIT_USER';
+export const EDIT_CATEGORY = 'EDIT_CATEGORY';
+export const EDIT_SUB_CATEGORY = 'EDIT_SUB_CATEGORY';
+export const EDIT_PARTNER ='EDIT_PARTNER';
+export const EDIT_PRODUCT = 'EDIT_PRODUCT';
+export const EDIT_BRAND = 'EDIT_BRAND';
+export const EDIT_CAROUSEL = 'EDIT_CAROUSEL';
+export const EDIT_MEASURE = 'EDIT_MEASURE';
+export const GET_ROLES = 'GET_ROLES';
+export const EDIT_EVENT = 'EDIT_EVENT';
+export const EDIT_REWARD = 'EDIT_REWARD';
+export const EDIT_REWARD_EVENT ='EDIT_REWARD_EVENT';
+export const EDIT_VOUCHER = 'EDIT_VOUCHER';
+export const EDIT_ROLE = 'EDIT_ROLE';

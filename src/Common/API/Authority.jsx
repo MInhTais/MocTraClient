@@ -1,0 +1,1 @@
+export const GET_ALL_AUTHORITIES_URL = `/bachmoc/admin/authority`;

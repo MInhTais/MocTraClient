@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+::-webkit-scrollbar{
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track{
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb{
+  @apply bg-gradient-to-r from-green-400 to-green-500 rounded-full
+}
+
+.my-modal .ant-modal-content,
+.my-modal .ant-modal-header {
+  border-radius: 20px;
+  z-index: '9999999';
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#components-layout-demo-side .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+#wheel{
+  @apply w-full flex flex-row justify-end
+
+}
+
+#canvas{
+  @apply w-2/3 flex justify-center p-0 m-0
+}

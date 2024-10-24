@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Verify</title>
+<!--css-->
+<style type="text/css">
+</style>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!--/css-->
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords"
+	content="Stalwart Responsive web template, Bootstrap Web Templates, Flat Web Templates,  Android  Compatible web template, 
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG,Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<!-- //for-mobile-apps -->
+<!-- js -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+
+<script>
+		(function ($) {
+			$.fn.UItoTop = function (options) {
+				var defaults = { text: 'To Top', min: 200, inDelay: 600, outDelay: 400, containerID: 'toTop', containerHoverID: 'toTopHover', scrollSpeed: 1200, easingType: 'linear' }, settings = $.extend(defaults, options), containerIDhash = '#' + settings.containerID, containerHoverIDHash = '#' + settings.containerHoverID; $('body').append('<a href="#" id="' + settings.containerID + '">' + settings.text + '</a>'); $(containerIDhash).hide().on('click.UItoTop', function () { $('html, body').animate({ scrollTop: 0 }, settings.scrollSpeed, settings.easingType); $('#' + settings.containerHoverID, this).stop().animate({ 'opacity': 0 }, settings.inDelay, settings.easingType); return false; }).prepend('<span id="' + settings.containerHoverID + '"></span>').hover(function () { $(containerHoverIDHash, this).stop().animate({ 'opacity': 1 }, 600, 'linear'); }, function () { $(containerHoverIDHash, this).stop().animate({ 'opacity': 0 }, 700, 'linear'); }); $(window).scroll(function () {
+					var sd = $(window).scrollTop(); if (typeof document.body.style.maxHeight === "undefined") { $(containerIDhash).css({ 'position': 'absolute', 'top': sd + $(window).height() - 50 }); }
+					if (sd > settings.min)
+						$(containerIDhash).fadeIn(settings.inDelay); else
+						$(containerIDhash).fadeOut(settings.Outdelay);
+				});
+			};
+		})(jQuery);
+	</script>
+<script>
+		jQuery.extend(jQuery.easing,
+			{
+				easeInQuad: function (x, t, b, c, d) {
+					return c * (t /= d) * t + b;
+				},
+				easeOutQuad: function (x, t, b, c, d) {
+					return -c * (t /= d) * (t - 2) + b;
+				},
+				easeInOutQuad: function (x, t, b, c, d) {
+					if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+					return -c / 2 * ((--t) * (t - 2) - 1) + b;
+				},
+				easeInCubic: function (x, t, b, c, d) {
+					return c * (t /= d) * t * t + b;
+				},
+				easeOutCubic: function (x, t, b, c, d) {
+					return c * ((t = t / d - 1) * t * t + 1) + b;
+				},
+				easeInOutCubic: function (x, t, b, c, d) {
+					if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+					return c / 2 * ((t -= 2) * t * t + 2) + b;
+				},
+				easeInQuart: function (x, t, b, c, d) {
+					return c * (t /= d) * t * t * t + b;
+				},
+				easeOutQuart: function (x, t, b, c, d) {
+					return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+				},
+				easeInOutQuart: function (x, t, b, c, d) {
+					if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+					return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+				},
+				easeInQuint: function (x, t, b, c, d) {
+					return c * (t /= d) * t * t * t * t + b;
+				},
+				easeOutQuint: function (x, t, b, c, d) {
+					return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
+				},
+				easeInOutQuint: function (x, t, b, c, d) {
+					if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
+					return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+				},
+				easeInSine: function (x, t, b, c, d) {
+					return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
+				},
+				easeOutSine: function (x, t, b, c, d) {
+					return c * Math.sin(t / d * (Math.PI / 2)) + b;
+				},
+				easeInOutSine: function (x, t, b, c, d) {
+					return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
+				},
+				easeInExpo: function (x, t, b, c, d) {
+					return (t == 0) ? b : c * Math.pow(2, 10 * (t / d - 1)) + b;
+				},
+				easeOutExpo: function (x, t, b, c, d) {
+					return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
+				},
+				easeInOutExpo: function (x, t, b, c, d) {
+					if (t == 0) return b;
+					if (t == d) return b + c;
+					if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+					return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+				},
+				easeInCirc: function (x, t, b, c, d) {
+					return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
+				},
+				easeOutCirc: function (x, t, b, c, d) {
+					return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
+				},
+				easeInOutCirc: function (x, t, b, c, d) {
+					if ((t /= d / 2) < 1) return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
+					return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
+				},
+				easeInElastic: function (x, t, b, c, d) {
+					var s = 1.70158; var p = 0; var a = c;
+					if (t == 0) return b; if ((t /= d) == 1) return b + c; if (!p) p = d * .3;
+					if (a < Math.abs(c)) { a = c; var s = p / 4; }
+					else var s = p / (2 * Math.PI) * Math.asin(c / a);
+					return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+				},
+				easeOutElastic: function (x, t, b, c, d) {
+					var s = 1.70158; var p = 0; var a = c;
+					if (t == 0) return b; if ((t /= d) == 1) return b + c; if (!p) p = d * .3;
+					if (a < Math.abs(c)) { a = c; var s = p / 4; }
+					else var s = p / (2 * Math.PI) * Math.asin(c / a);
+					return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
+				},
+				easeInOutElastic: function (x, t, b, c, d) {
+					var s = 1.70158; var p = 0; var a = c;
+					if (t == 0) return b; if ((t /= d / 2) == 2) return b + c; if (!p) p = d * (.3 * 1.5);
+					if (a < Math.abs(c)) { a = c; var s = p / 4; }
+					else var s = p / (2 * Math.PI) * Math.asin(c / a);
+					if (t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+					return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
+				},
+				easeInBack: function (x, t, b, c, d, s) {
+					if (s == undefined) s = 1.70158;
+					return c * (t /= d) * t * ((s + 1) * t - s) + b;
+				},
+				easeOutBack: function (x, t, b, c, d, s) {
+					if (s == undefined) s = 1.70158;
+					return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+				},
+				easeInOutBack: function (x, t, b, c, d, s) {
+					if (s == undefined) s = 1.70158;
+					if ((t /= d / 2) < 1) return c / 2 * (t * t * (((s *= (1.525)) + 1) * t - s)) + b;
+					return c / 2 * ((t -= 2) * t * (((s *= (1.525)) + 1) * t + s) + 2) + b;
+				},
+				easeInBounce: function (x, t, b, c, d) {
+					return c - jQuery.easing.easeOutBounce(x, d - t, 0, c, d) + b;
+				},
+				easeOutBounce: function (x, t, b, c, d) {
+					if ((t /= d) < (1 / 2.75)) {
+						return c * (7.5625 * t * t) + b;
+					} else if (t < (2 / 2.75)) {
+						return c * (7.5625 * (t -= (1.5 / 2.75)) * t + .75) + b;
+					} else if (t < (2.5 / 2.75)) {
+						return c * (7.5625 * (t -= (2.25 / 2.75)) * t + .9375) + b;
+					} else {
+						return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
+					}
+				},
+				easeInOutBounce: function (x, t, b, c, d) {
+					if (t < d / 2) return jQuery.easing.easeInBounce(x, t * 2, 0, c, d) * .5 + b;
+					return jQuery.easing.easeOutBounce(x, t * 2 - d, 0, c, d) * .5 + c * .5 + b;
+				}
+			});
+	</script>
+<!-- /js -->
+<!--fonts-->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400'
+	rel='stylesheet' type='text/css'>
+<!--/fonts-->
+<!--script-->
+<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+			});
+		});
+	</script>
+<!--/script-->
+
+
+</head>
+
+<body
+	style="font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background: #ffffff;">
+	<!--header-->
+	<div>
+		<div style="color: #000; position: relative;">
+			<div
+				style="padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;">
+				<div
+					style="float: left; position: absolute; top: 10px; z-index: 9999;">
+					<h1>
+						<a href="#"
+							style="text-decoration: none; font-size: 0.7em; letter-spacing: 0px; line-height: 1em; color: #222121; opacity: 0.5; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+							MỘC TRÀ <span
+							style="display: block; font-size: 12px; text-align: right; letter-spacing: 2px; top: 37px; position: absolute; right: -60px;">Store</span>
+						</a>
+					</h1>
+				</div>
+
+				<div
+					style="width: 62%; float: right; margin-top: 80px; margin-right: 20%; font-family: courier, arial, helvetica; text-align: center;">
+					<h1>“Plant your garden and decorate your own soul, instead of
+						waiting for someone to bring you flowers”</h1>
+					<br>
+					<quote><a style="color:rgb(29, 105, 29)" href="http://moctra.surge.sh" style="text-decoration: none;">moctra.surge.sh</a></quote>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- script-for-menu -->
+	<script>
+		$("span.menu").click(function () {
+			$(".top-nav ul").slideToggle("slow", function () {
+			});
+		});
+	</script>
+	<!-- script-for-menu -->
+	<div
+		style="background: url('https://thumbs.dreamstime.com/b/light-pastel-green-wood-background-close-up-light-pastel-green-wood-backgrounds-grunge-planks-108482756.jpg') no-repeat -0px 0; min-height: 300px; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; -ms-background-size: cover; -o-background-size: cover;">
+	</div>
+	<!--inner-page-about-->
+	<div>
+		<div
+			style="padding: 4em 0; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; width: 970px;">
+			<h2 style="font-family: courier, arial, helvetica;">XIN CHÀO
+				[[${username}]],</h2>
+			<div>
+				<div style="margin-top: 3em;">
+					<div
+						style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 35%; padding-left: 0; float: left;">
+						<img
+							src="https://i.pinimg.com/564x/49/ef/71/49ef71a058a8c988b58bdf50425a644c.jpg"
+							alt="" style="display: block; max-width: 100%; height: auto;" />
+					</div>
+					<div
+						style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 58.33333333%; padding-left: 0;">
+						<h4
+							style="letter-spacing: 2px; color: #4a4343; font-size: 1.3em; font-weight: 600; margin: 0; line-height: 1.9em;">THÔNG TIN KHÁCH HÀNG</h4>
+						<p
+							style="color: #848484; font-size: 1em; line-height: 1.9em; margin-top: 1em;">Họ tên: Trần Long</p>
+                            <p
+							style="color: #848484; font-size: 1em; line-height: 1.9em; margin-top: 1em;">Số điện thoại: 0702362681</p>
+                            <p
+							style="color: #848484; font-size: 1em; line-height: 1.9em; margin-top: 1em;">Địa chỉ: Khóm 1 - Cầu Quan - Tiểu Cần - Trà Vinh</p>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+		<!------->
+		<div style="margin-top: 3em;">
+			<div
+				style="padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; width: 970px;">
+				<h5
+					style="letter-spacing: 2px; color: #29c0ff; margin-bottom: 0.6em; font-size: 1.5em; font-weight: 600;">CHI TIẾT HÓA ĐƠN</h5>
+				<h4
+					style="letter-spacing: 2px; color: #4a4343; font-size: 1.3em; font-weight: 600; margin: 0; line-height: 1.9em;">
+                    Ngày lập: 2021-12-01
+                </h4>
+				<table style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left; font-size:16px; padding:10px;">STT</th>
+                            <th style="text-align: left; font-size:16px; padding:10px;">TÊN SẢN PHẨM</th>
+                            <th style="text-align: left; font-size:16px; padding:10px;">ĐƠN GIÁ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgb(167, 235, 167); padding: 5px;">
+                            <td style="text-align: left; font-size:16px; padding:10px;">1</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">Cháo yến Hoàng Lan 30 gói x24 bịch sa tế x10</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">1200000</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgb(167, 235, 167); padding: 5px;">
+                            <td style="text-align: left; font-size:16px; padding:10px;">1</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">Cháo yến Hoàng Lan 30 gói x24 bịch sa tế x10</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">1200000</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgb(167, 235, 167); padding: 5px;">
+                            <td style="text-align: left; font-size:16px; padding:10px;">1</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">Cháo yến Hoàng Lan 30 gói x24 bịch sa tế x10</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">1200000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td style="text-align: left; font-size:16px; padding:10px;"></td>
+                            <td style="text-align: left; font-size:16px; padding:10px; font-weight: bold;">Tổng tiền</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">1000000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="text-align: left; font-size:16px; padding:10px;"></td>
+                            <td style="text-align: left; font-size:16px; padding:10px; font-weight: bold;">Phí ship</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">50000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="text-align: left; font-size:16px; padding:10px;"></td>
+                            <td style="text-align: left; font-size:16px; padding:10px; font-weight: bold;">Tổng cộng</td>
+                            <td style="text-align: left; font-size:16px; padding:10px;">1050000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!------->
+		<div style="margin-top: 4em; margin-top: 2em; display: block;">
+			<div
+				style="padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; width: 970px;">
+				<h4
+					style="color: #29c0ff; margin-bottom: .7em; font-size: 1.5em; font-weight: 600; text-align: left;">SẢN PHẨM CỦA CHÚNG TÔI</h4>
+				<div style="text-align: center;">
+					<div
+						style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 23%; text-align: center;">
+						<img
+							src="https://i2.wp.com/www.cookinginmygenes.com/wp-content/uploads/2019/04/Farmers-Market-Spring-Salad-1.jpg?w=668&ssl=1"
+							alt="" style="width: 180px" />
+						<h4 style="font-size: 1.3em; margin: .5em 0;">
+							<a href="single.html"
+								style="color: #29c0ff; text-decoration: none;">VEGETABLES</a>
+						</h4>
+						<p style="color: #848484; line-height: 1.9em; font-size: 1em;">Vegetables
+							are a food source that contains a lot of nutrients that are
+							beneficial to our health. From vegetables, we can process them
+							into many different dishes.</p>
+					</div>
+					<div
+						style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 23%; padding-left: 0;">
+						<img
+							src="https://i.pinimg.com/564x/c4/c3/17/c4c317bd026e1cf04b120cdd59f579de.jpg"
+							alt="" style="width: 180px" />
+						<h4 style="font-size: 1.3em; margin: .5em 0;">
+							<a href="single.html"
+								style="color: #29c0ff; text-decoration: none;">FRUIT</a>
+						</h4>
+						<p style="color: #848484; line-height: 1.9em; font-size: 1em;">Daily
+							intake of fruit brings a lot of benefits to the body's health.
+							Because fruit is an excellent source of nutrients, it provides
+							vitamins, minerals and fiber.</p>
+					</div>
+					<div
+						style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 23%; padding-left: 0;">
+						<img
+							src="https://i.pinimg.com/564x/a4/80/17/a4801706f234de1e913098d02177a70e.jpg"
+							alt="" style="width: 180px" />
+						<h4 style="font-size: 1.3em; margin: .5em 0;">
+							<a href="single.html"
+								style="color: #29c0ff; text-decoration: none;">DRIED</a>
+						</h4>
+						<p style="color: #848484; line-height: 1.9em; font-size: 1em;">Dried
+							fruit often contains a lot of fiber and is a rich source of
+							antioxidants, especially polyphenols.</p>
+					</div>
+					<div
+						style="position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 23%; padding-left: 0;">
+						<img
+							src="https://i.pinimg.com/236x/81/41/2d/81412d104dba0f17a19b391ca0a5c40a.jpg"
+							alt="" style="width: 180px" />
+						<h4 style="font-size: 1.3em; margin: .5em 0;">
+							<a href="single.html"
+								style="color: #29c0ff; text-decoration: none;">JUICE</a>
+						</h4>
+						<p style="color: #848484; line-height: 1.9em; font-size: 1em;">Fruit
+							juices are natural medicines. Regular use of them will help
+							stabilize blood pressure and blood sugar and may even prevent
+							cancer.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+</body>
+
+</html>
